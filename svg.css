@@ -1,0 +1,52 @@
+* {
+    transform: scale(1);
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+/* Regra genérica para hover comum */
+.motors:hover .motor,
+.potenciometers:hover .potenciometer,
+.fingers:hover .finger,
+.hands:hover .hand,
+.unos:hover .uno,
+.protoboard:hover,
+.controllers:hover .controller,
+.strings:hover .string {
+    cursor: pointer;
+    fill: red;
+}
+
+/* Transformações individuais */
+.motors:hover .motor {
+    transform: scale(1.4);
+}
+
+.potenciometers:hover .potenciometer {
+    transform: scale(2);
+}
+
+.fingers:hover .finger {
+    transform: scale(1.2);
+}
+
+.hands:hover .hand {
+    transform: scale(1);
+}
+
+.unos:hover .uno {
+    transform: scale(1.2);
+}
+
+.protoboard:hover {
+    transform: scale(1.2);
+}
+
+.controllers:hover .controller {
+    transform: scale(1.1);
+}
+
+.strings:hover .string {
+    transform: scale(1.2);
+}
