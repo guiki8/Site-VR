@@ -1,0 +1,75 @@
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(0deg, rgba(4,8,42,255) 0%, rgba(4,8,42,255) 100%);
+    overflow-x: hidden;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagem_vr2.jpg');
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-position: right;
+    transform: scaleX(-1);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+main {
+    margin: 2rem;
+    padding: 1.5rem;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+#particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Fica atrás de todo o conteúdo */
+    pointer-events: none;
+}
