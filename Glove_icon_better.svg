@@ -48,4 +48,12 @@
         <path class="string" fill="#ffffff" opacity="1.00" d=" M 345.81 209.21 C 347.26 207.92 348.75 206.66 350.22 205.39 C 364.56 221.95 378.55 238.81 392.86 255.40 C 392.86 255.59 392.85 255.96 392.84 256.14 C 389.06 256.92 385.09 256.58 381.38 255.58 C 368.85 241.48 356.94 226.81 344.53 212.61 L 343.47 211.42 C 344.23 210.67 345.01 209.93 345.81 209.21 Z" />
     </g>
 </g>
+<defs>
+  <linearGradient id="meuGradiente" x1="0" y1="0" x2="0" y2="500" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="rgb(235, 170, 255)" />
+    <stop offset="50%" stop-color="rgb(225, 73, 255)" />
+    <stop offset="100%" stop-color="rgb(126, 0, 165)" />
+  </linearGradient>
+</defs>
+
 </svg>

@@ -15,16 +15,38 @@
 .controllers:hover .controller,
 .strings:hover .string {
     cursor: pointer;
-    fill: red;
+    fill: url(#meuGradiente);;
 }
 
-/* Transformações individuais */
+/* Regra genérica para cor */
+.motor,
+.potenciometer,
+.finger,
+.uno,
+.protoboard,
+.controller {
+    fill: white;
+}
+
+.hand {
+    fill: white;
+}
+
+.string {
+    fill: rgba(255, 255, 255, 1);
+    transform: scale(1);
+}
+
 .motors:hover .motor {
     transform: scale(1.4);
 }
 
+.potenciometer {
+    transform: scale(1.5);
+}
+
 .potenciometers:hover .potenciometer {
-    transform: scale(2);
+    transform: scale(2.5);
 }
 
 .fingers:hover .finger {

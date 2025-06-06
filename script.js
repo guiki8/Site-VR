@@ -28,7 +28,7 @@ class Particle {
 
     // ângulo e distância inicial para distribuição radial
     const angle = Math.random() * Math.PI * 2;
-    const distance = Math.random() * canvas.width * 0.05; // começa perto do centro
+    const distance = Math.random() * canvas.width * 0.25; // começa perto do centro
 
     this.x = origin.x + Math.cos(angle) * distance;
     this.y = origin.y + Math.sin(angle) * distance;

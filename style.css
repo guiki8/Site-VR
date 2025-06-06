@@ -28,7 +28,7 @@ body::before {
 }
 
 .body_sobre::before {
-    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background: radial-gradient(circle, rgb(91, 63, 251) 0%, rgb(51, 19, 126) 50%, rgb(6, 6, 34) 100%);
 }
 
 header {
@@ -63,7 +63,7 @@ nav a:hover {
 
 main {
     margin: 2rem;
-    padding: 1.5rem;
+    padding: 2rem;
     width: 350px;
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.4);
@@ -84,13 +84,24 @@ main {
     border-radius: 10px;
 }
 
-main h2{
-    position: absolute;
+main h2 {
+    position: relative;
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 1.5rem;
-    margin: 0;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.main_sobre h2{
+    margin-top: -1rem;
+    font-size: 2.5rem;
+}
+
+main p {
+    transform: translateY(-20%);
 }
 
 #particles-bg {
@@ -104,7 +115,7 @@ main h2{
     pointer-events: none;
 }
 
-.svg{
+.svg {
     position: absolute;
     top: 57%;
     left: 55%;
