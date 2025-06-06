@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="svg.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="body_sobre">
@@ -20,8 +23,71 @@
 
   <main class="main_sobre">
     <h2>Luva Háptica</h2>
-    <object class="svg" data="Glove_icon_better.svg" type="image/svg+xml"></object>
+    <!--<object id="svg-container" class="svg" data="Glove_icon_better.svg" type="image/svg+xml"></object>-->
+    <div id="svg-container" class="svg"></div>
   </main>
+
+  <div id="motor" class="info-box box-motor">
+    <h1>Servo-Motores</h1>
+    <p>Os motores são responsáveis pelo movimento dos dedos na mão robótica. Eles controlam e limitam a flexão dos
+      dedos.</p>
+  </div>
+
+  <div id="uno" class="info-box box-uno">
+    <h1>Arduino Uno</h1>
+    <p>O Arduino Uno é o microcontrolador que comanda todo o sistema, recebendo sinais dos sensores e controlando os
+      atuadores.</p>
+  </div>
+
+  <div id="finger" class="info-box box-finger">
+    <h1>Caps dos Dedos</h1>
+    <p>As caps conectam as cordas aos motores, transferindo a sensação de toque e limitando o movimento dos dedos para
+      adicionar mais imersão e precisão nos comandos da mão robótica.</p>
+  </div>
+
+  <div id="string" class="info-box box-string">
+    <h1>Cordas</h1>
+    <p>As cordas ligam os motores aos dedos. Quando o motor gira, a corda puxa ou solta o dedo, permitindo o movimento
+      de abrir e fechar com controle suave e eficiente, essencial para a funcionalidade da mão robótica.</p>
+  </div>
+
+  <div id="potenciometer" class="info-box box-potenciometer">
+    <h1>Potenciômetros</h1>
+    <p>Os potenciômetros medem a posição dos dedos na luva, convertendo o movimento da mão em sinais elétricos que são
+      enviados para o Arduino e para os servo-motores, garantindo movimentos precisos e sincronizados.</p>
+  </div>
+
+  <div id="protoboard" class="info-box box-protoboard">
+    <h1>Protoboard</h1>
+    <p>A protoboard é usada para montar o circuito eletrônico de forma prática e sem solda, facilitando testes e
+      conexões dos componentes, permitindo alterações rápidas durante o desenvolvimento do projeto.</p>
+  </div>
+
+  <div id="hand" class="info-box box-hand">
+    <h1>Luva</h1>
+    <p>A luva segura todo o sistema, proporcionando conforto ao usuário e facilitando o uso dos sensores e atuadores que
+      capturam e transmitem os movimentos da mão para a parte robótica.</p>
+  </div>
+
+  <div id="controller" class="info-box box-controller">
+    <h1>Controle Quest 2</h1>
+    <p>O controle do Meta Quest 2 permite localizar a posição e a orientação da mão no espaço 3D, possibilitando uma
+      interação mais natural e precisa em aplicações de realidade virtual e robótica.</p>
+  </div>
+
+  <div id="motor-target" class="target-dot"></div>
+  <div id="uno-target" class="target-dot"></div>
+  <div id="finger-target" class="target-dot"></div>
+  <div id="string-target" class="target-dot"></div>
+  <div id="potenciometer-target" class="target-dot"></div>
+  <div id="protoboard-target" class="target-dot"></div>
+  <div id="hand-target" class="target-dot"></div>
+  <div id="controller-target" class="target-dot"></div>
+
+  <svg id="connector-svg"></svg>
+
+  <script src="svg.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-* {
+.group * {
     transform: scale(1);
     transform-origin: center;
     transform-box: fill-box;
@@ -16,6 +16,7 @@
 .strings:hover .string {
     cursor: pointer;
     fill: url(#meuGradiente);;
+    filter: url(#shadowBehindGlow);
 }
 
 /* Regra genérica para cor */
@@ -26,6 +27,7 @@
 .protoboard,
 .controller {
     fill: white;
+    filter: url(#shadowBehind);
 }
 
 .hand {
@@ -71,4 +73,8 @@
 
 .strings:hover .string {
     transform: scale(1.2);
+}
+
+#motor-target{
+    top: ;
 }
