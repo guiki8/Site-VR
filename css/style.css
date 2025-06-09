@@ -24,12 +24,12 @@ body::before {
 }
 
 .body_index::before {
-    background-image: url('imagem_vr2.jpg');
+    background-image: url('../imagens/imagem_vr2.jpg');
 }
 
 .body_sobre::before {
     height: 130vh;
-    background-image: url('hologram.png');
+    background-image: url('../imagens/hologram.png');
     background-position: center 0vh;
     position: absolute;
     background-size: cover;
@@ -166,7 +166,7 @@ main p {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: cyan;
+    background: rgba(0, 0, 0, 0);
     border-radius: 50%;
     z-index: 5;
 }

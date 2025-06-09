@@ -1,4 +1,4 @@
-fetch("Glove_icon_better.svg")
+fetch("../imagens/Glove_icon_better.svg")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("svg-container").innerHTML = data;
@@ -101,7 +101,7 @@ function updateConnectorLines() {
     const y1 = boxRect.top + boxRect.height / 1.5;
 
     const x2 = targetRect.left + targetRect.width / 2;
-    const y2 = targetRect.top + targetRect.height / 2;
+    const y2 = targetRect.top + targetRect.height / 2 + 150;
 
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     line.setAttribute('x1', x1);
