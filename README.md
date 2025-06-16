@@ -1,10 +1,7 @@
 
 ---
 
-## 🌐 Site‑VR
-
-```
-# 🌐 Site‑VR – Luva Háptica
+## 🌐 Site‑VR – Luva Háptica
 
 ## Sobre o repositório
 Site estático com explicação técnica e visual sobre o desenvolvimento de uma luva háptica em VR.
@@ -18,5 +15,4 @@ Site estático com explicação técnica e visual sobre o desenvolvimento de uma
 
 ## Como executar
 Abra `index.html` no navegador ou rode um servidor local:
-```bash
 python -m http.server 8000
