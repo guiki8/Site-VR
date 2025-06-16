@@ -3,7 +3,7 @@
 
 ## 🌐 Site‑VR
 
-```markdown
+```
 # 🌐 Site‑VR – Luva Háptica
 
 ## Sobre o repositório
