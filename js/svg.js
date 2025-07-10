@@ -3,21 +3,23 @@ fetch("../imagens/Glove_icon_better.svg")
   .then((data) => {
     document.getElementById("svg-container").innerHTML = data;
 
-    const boxes = document.querySelectorAll(".info-box");
+    const infoBoxes = document.querySelectorAll(".info-box");
+    const imageBoxes = document.querySelectorAll(".image-box");
 
     function hideAllBoxes() {
-      boxes.forEach((box) => box.classList.remove("active"));
+      infoBoxes.forEach((box) => box.classList.remove("active"));
+      imageBoxes.forEach((box) => box.classList.remove("active")); // Esconde todas as caixas de imagem
     }
 
     const clickMap = {
-      ".motor": ".box-motor",
-      ".uno": ".box-uno",
-      ".finger": ".box-finger",
-      ".hand": ".box-hand",
-      ".protoboard": ".box-protoboard",
-      ".string": ".box-string",
-      ".potenciometer": ".box-potenciometer",
-      ".controller": ".box-controller",
+      ".motor": { info: ".box-motor", image: "#motor-image-box" },
+      ".uno": { info: ".box-uno", image: "#uno-image-box" },
+      ".finger": { info: ".box-finger", image: "#finger-image-box" },
+      ".hand": { info: ".box-hand", image: "#hand-image-box" },
+      ".protoboard": { info: ".box-protoboard", image: "#protoboard-image-box" },
+      ".string": { info: ".box-string", image: "#string-image-box" },
+      ".potenciometer": { info: ".box-potenciometer", image: "#potenciometer-image-box" },
+      ".controller": { info: ".box-controller", image: "#controller-image-box" },
     };
 
     for (let selector in clickMap) {
@@ -25,11 +27,16 @@ fetch("../imagens/Glove_icon_better.svg")
         el.addEventListener("click", () => {
           hideAllBoxes();
 
-          const box = document.querySelector(clickMap[selector]);
-          if (box) {
-            box.classList.add("active");
-            updateConnectorLines(); // Atualiza a linha após mostrar box
+          const infoBox = document.querySelector(clickMap[selector].info);
+          if (infoBox) {
+            infoBox.classList.add("active");
           }
+
+          const imageBox = document.querySelector(clickMap[selector].image);
+          if (imageBox) {
+            imageBox.classList.add("active"); // Exibe a caixa de imagem correspondente
+          }
+          updateConnectorLines(); // Atualiza a linha após mostrar box
         });
       });
     }
@@ -102,19 +109,6 @@ function updateConnectorLines() {
 
     const x2 = targetRect.left + targetRect.width / 2;
     const y2 = targetRect.top + targetRect.height / 2 + 150;
-
-    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('x1', x1);
-    line.setAttribute('y1', y1);
-    line.setAttribute('x2', x2);
-    line.setAttribute('y2', y2);
-    line.setAttribute('stroke', 'cyan');
-    line.setAttribute('stroke-width', '2');
-    line.setAttribute('stroke-opacity', '0.8');
-    line.style.filter = 'drop-shadow(0 0 4px cyan)';
-    line.style.transition = 'all 0.3s ease';
-
-    svg.appendChild(line);
   });
 }
 
