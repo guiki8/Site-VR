@@ -219,3 +219,111 @@ main p {
     overflow:visible;
     z-index:1000;
 }
+
+/* Estilos Específicos para a Página de Contato */
+.body_contato::before {
+    background-image: url('../imagens/hologram.png'); /* Você pode mudar esta imagem */
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    transform: none; /* Remove o espelhamento se não for desejado aqui */
+}
+
+.main_contato {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adaptação para telas menores */
+    max-width: 500px; /* Largura máxima para desktops */
+    padding: 2rem;
+    box-sizing: border-box; /* Garante que padding não adicione à largura total */
+    text-align: center;
+}
+
+.main_contato h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+.main_contato p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #ccc;
+    transform: translateY(0); /* Resetar a transformação de main p */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left; /* Alinhar rótulos e campos à esquerda */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 4px rgba(0, 255, 255, 0.5);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3) !important; /* ADICIONADO: Força a cor de fundo */
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+}
+
+/* ADICIONADO: Garante que a cor de fundo persista no foco */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.3) !important; /* ADICIONADO: Força a cor de fundo no foco */
+}
+
+/* ADICIONADO: Regra para navegadores que aplicam autofill com fundo branco */
+/* Note: "-webkit-autofill" é um pseudo-elemento específico do WebKit/Chromium */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
+.form-group input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.3) inset !important; /* Define a cor de fundo do autofill */
+    -webkit-text-fill-color: white !important; /* Garante que o texto preenchido automaticamente seja branco */
+    background-color: rgba(0, 0, 0, 0.3) !important; /* Fallback */
+    transition: background-color 5000s ease-in-out 0s; /* Hack para evitar mudança de cor gradual */
+}
+
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: rgba(0, 255, 255, 0.6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; /* Centraliza o botão */
+}
+
+.contact-form button:hover {
+    background-color: rgba(0, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
