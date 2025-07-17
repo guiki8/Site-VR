@@ -5,8 +5,7 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     background: linear-gradient(0deg, rgba(4, 8, 42, 255) 0%, rgba(4, 8, 42, 255) 100%);
-    overflow: hidden; /* Esta linha impede a rolagem */
-    overflow-x: hidden; /* Você já tinha este, mas o 'overflow: hidden' geral cobre ambos */
+    overflow-x: hidden;
 }
 
 body::before {
@@ -220,7 +219,7 @@ main p {
     z-index:1000;
 }
 
-/* Estilos Específicos para a Página de Contato */
+/* Estilos Específicos para a Página de Contato e Sucesso */
 .body_contato::before {
     background-image: url('../imagens/hologram.png'); /* Você pode mudar esta imagem */
     height: 100vh;
@@ -231,30 +230,97 @@ main p {
 
 .main_contato {
     position: absolute;
-    top: 50%;
+    top: 80%; /* Ajustado para centralizar verticalmente */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%; /* Adaptação para telas menores */
     max-width: 500px; /* Largura máxima para desktops */
     padding: 2rem;
-    box-sizing: border-box; /* Garante que padding não adicione à largura total */
+    box-sizing: border-box;
     text-align: center;
+    /* Adicione um pouco de espaçamento vertical para telas menores, se necessário */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .main_contato h2 {
     font-size: 2.2rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: -4rem; /* Ajustado para melhor espaçamento com o parágrafo */
     color: #00ffff;
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
 }
 
 .main_contato p {
-    margin-bottom: 2rem;
     font-size: 1.1rem;
     color: #ccc;
-    transform: translateY(0); /* Resetar a transformação de main p */
+    margin-bottom: 1rem; /* Ajuste para espaçamento entre parágrafos e links */
+    transform: translateY(0); /* Garante que não haja deslocamento vertical */
 }
 
+.main_contato2 {
+    position: absolute;
+    top: 50%; /* Ajustado para centralizar verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adaptação para telas menores */
+    max-width: 500px; /* Largura máxima para desktops */
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    /* Adicione um pouco de espaçamento vertical para telas menores, se necessário */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main_contato2 h2 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    margin-bottom: -5rem; /* Ajustado para melhor espaçamento com o parágrafo */
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+.main_contato2 p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1rem; /* Ajuste para espaçamento entre parágrafos e links */
+    transform: translateY(0); /* Garante que não haja deslocamento vertical */
+}
+
+/* Estilos para os links na página de sucesso */
+.success-actions {
+    display: flex;
+    flex-direction: column; /* Links empilhados verticalmente */
+    gap: 1rem; /* Espaço entre os links */
+    margin-top: 2rem; /* Espaço acima do grupo de links */
+    align-items: center; /* Centraliza os links dentro do contêiner */
+}
+
+.success-link {
+    display: inline-block; /* Permite definir padding e width */
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(0, 255, 255, 0.2); /* Fundo mais suave para os links */
+    color: #00ffff;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s;
+    text-shadow: 0 0 4px rgba(0, 255, 255, 0.5);
+    max-width: 80%; /* Garante que os links não fiquem muito largos em telas grandes */
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+}
+
+.success-link:hover {
+    background-color: rgba(0, 255, 255, 0.4);
+    transform: translateY(-2px);
+    border-color: #00ffff;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
+
+
+/* Estilos do formulário de contato */
 .contact-form {
     display: flex;
     flex-direction: column;

@@ -89,3 +89,15 @@ function animate() {
 }
 
 animate();
+
+// Código para redirecionamento após 3 segundos na página de sucesso
+// Usamos DOMContentLoaded para garantir que o script só execute após a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    // Verifica se a URL atual contém 'sucesso.html' E está na porta 8080
+    if (window.location.href.includes('sucesso.html') && window.location.port === '8080') {
+        setTimeout(function() {
+            // Certifique-se de que este caminho está CORRETO para o seu index.html
+            window.location.href = 'http://localhost:8080/Site-VR/html/index.html';
+        }, 3000); // 3000 milissegundos = 3 segundos
+    }
+});
