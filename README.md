@@ -1,18 +1,17 @@
-
 ---
 
-## 🌐 Site‑VR – Luva Háptica
+## 🌐 VR-Glove Website
 
-## Sobre o repositório
-Site estático com explicação técnica e visual sobre o desenvolvimento de uma luva háptica em VR.
+## About the Repository
+Static website with technical and visual explanations about the development of a VR haptic glove.
 
-## Funcionalidades
-- Páginas explicativas com imagens e animações
-- Sessões sobre o projeto, equipe e contato
+## Features
+- Informative pages with images and animations
+- Sections about the project, team, and contact
 
-## Tecnologias
+## Technologies
 - HTML5, CSS3, JavaScript
 
-## Como executar
-Abra `index.html` no navegador ou rode um servidor local:
+## How to Run
+Open `index.html` in your browser or run a local server:
 python -m http.server 8000
